@@ -122,6 +122,7 @@ customButtons  =>    Custom buttons thingy          =>   [                      
                                                                 onclick: aFunc, // Click handler
                                                             }
                                                         ]
+exportFiltered =>    Export filtered rows only      =>   true (default)          // Whether only filtered rows are exported/printed
 ```
 
 ### Localization
