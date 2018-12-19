@@ -125,6 +125,7 @@
 				type: Boolean,
 				default: false
 			},
+			exportFiltered: {default: true},
 			paginate: {default: true},
 			exportable: {default: true},
 			printable: {default: true},
@@ -221,8 +222,10 @@
 
 				table += '</thead><tbody>';
 
-				for (var i = 0; i < this.rows.length; i++) {
-					const row = this.rows[i];
+				var rows = this.exportFiltered ? this.processedRows : this.rows;
+
+				for (var i = 0; i < rows.length; i++) {
+					const row = rows[i];
 					table += '<tr>';
 					for (var j = 0; j < this.columns.length; j++) {
 						const column = this.columns[j];
